@@ -6,19 +6,36 @@ let classes = (className) => document.getElementsByClassName(className);
 
 const form = ids('form');
 let errorMsg = classes("error");
-console.log(errorMsg[0]);
-console.log(errorMsg[1]);
-
-
+let succsessIcon = classes("success");
+let warningIcon = classes("warning");
 
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const userName = ids('username').value;
-    console.log(userName);
-    if(userName == ""){
-        errorMsg[0].innertext = ` <span> username can not be empty</span>`
-        errorMsg[0].classList.add = "block";
-    }
+    const password = ids('password').value;
+
+    vallidation(userName, 0, "username can not be empty");
+    vallidation(password, 1, "password can not be empty");
+    console.log(errorMsg);
+
 
 })
+
+const vallidation = (field, serial, msg) => {
+
+    if (field.trim() === "") {
+        errorMsg[serial].innerHTML = msg;
+        succsessIcon[serial].style.opacity = "0";
+        warningIcon[serial].style.opacity = "1";
+
+    }
+
+    else {
+        errorMsg[serial].innerHTML = "";
+        succsessIcon[serial].style.opacity = "1";
+        warningIcon[serial].style.opacity = "0";
+
+    }
+
+}
