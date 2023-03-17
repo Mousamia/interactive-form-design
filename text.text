@@ -38,19 +38,4 @@
 
 
 
-
-<div>
-  <label for="username"></label>
-  <input type="text" name="" id="username">
-  <div class="error"></div>
-</div>
-<div>
-  <label for="username"></label>
-  <input type="text" name="" id="username">
-  <div class="error"></div>
-</div>
-<div>
-  <label for="username"></label>
-  <input type="text" name="" id="username">
-  <div class="error"></div>
-</div>
+window.location.href ==="./sign-up.html";
