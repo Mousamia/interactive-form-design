@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form design</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/7d42369223.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>    <script src="https://kit.fontawesome.com/7d42369223.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -16,29 +15,29 @@
 
         <div id="form" class="flex flex-col bg-purple-300 p-28 rounded-lg w-6/12">
 
-            <form action="" class="border-2 border-red-500 p-12">
+            <form id="form" action="" class="p-12">
                 <h1 class="text-4xl font-bold text-purple-700">Register </h1>
                 <div class="flex flex-col my-2">
                     <label for="username" class="text-xl font-bold my-2">Username: </label>
                     <input type="text" name="" id="username" class="bg-slate-200 rounded-lg p-2 font-italic"
-                        placeholder=" Your name..." required >
+                        placeholder=" Your name..." >
                     <div class="flex justify-end relative">
                         <i class="success fa-solid fa-check text-green-500 absolute bottom-3 right-5 font-bold"></i>
                         <i class="warning fa-solid fa-exclamation text-red-500 absolute bottom-3 right-3 font-bold"></i>
                     </div>
-                    <div class="error">error</div>
+                    <div class="error hidden">error</div>
 
                 </div>
                 <div class="flex flex-col my-2">
                     <label for="password" class="text-xl font-bold my-2">Password: </label>
                     <input type="password" name="" id="passwordz" class="bg-slate-200 rounded-lg p-2 font-italic"
-                        placeholder=" Your name..." required>
+                        placeholder=" Your name...">
                     <div class="flex justify-end relative">
                         <i class="success fa-solid fa-check text-green-500 absolute bottom-3 right-5 font-bold"></i>
                         <i class="warning fa-solid fa-exclamation text-red-500 absolute bottom-3 right-3 font-bold"></i>
                     </div>
 
-                    <div class="error">error</div>
+                    <div class="error hidden">error</div>
                 </div>
 
                 <div class="flex justify-around mt-2">
