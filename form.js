@@ -13,7 +13,7 @@ let warningIcon = classes("warning");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const userName = ids('username').value;
-    var later = userName;
+    
     const password = ids('password').value;
     const check1 = vallidation(userName, 0, "username can not be empty");
     const check2 = vallidation(password, 1, "password can not be empty");
@@ -27,7 +27,7 @@ form.addEventListener('submit', (e) => {
         window.location.href = "./sign-up.html";
     }
     
-
+    login(userName, password);
 })
 
 
@@ -47,7 +47,15 @@ const vallidation = (field, serial, msg) => {
         warningIcon[serial].style.opacity = "0";
         return 2;
     }
-
-    
 }
 
+
+const loginBtn = document.getElementById('login');
+loginBtn.addEventListener("click", function login(userName, password){
+    console.log(userName);
+    console.log(password);
+})
+
+
+// loaclstroage e info gula rekhe dekhate hobe 
+localStorage.getItem('cart');
